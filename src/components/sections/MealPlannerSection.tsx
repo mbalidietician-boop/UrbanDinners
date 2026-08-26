@@ -311,8 +311,7 @@ export default function MealPlannerSection({ className }: MealPlannerSectionProp
                       ...lines,
                       '',
                       '💡 Urban Dinners by Registered Dietitian Mbali Mapholi',
-                      '🇿🇦 Winter 2026 Collection',
-                      '',
+                                            '',
                       'www.mbalimapholiinc.co.za',
                     ].join('\n');
                     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');

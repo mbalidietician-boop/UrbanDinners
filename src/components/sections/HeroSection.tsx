@@ -75,7 +75,7 @@ export default function HeroSection() {
             transition={{ duration: 0.4 }}
             className="mb-6 inline-flex items-center rounded-full bg-sage px-4 py-1.5 text-xs font-medium text-sage-foreground sm:text-sm"
           >
-            By Registered Dietitian Mbali Mapholi
+            By Registered Dietitian Mbali Mapholi <span className="italic">— author of Inkonjane</span>
           </motion.span>
 
           <motion.h1

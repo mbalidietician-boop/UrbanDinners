@@ -49,7 +49,7 @@ export default function AppHeader() {
             Urban Dinners
           </button>
           <span className="text-xs text-muted-foreground">
-            by Mbali Mapholi, RD
+            by Mbali Mapholi, RD <span className="italic text-primary/70">— author of Inkonjane</span>
           </span>
         </div>
 
@@ -91,7 +91,7 @@ export default function AppHeader() {
             <SheetTitle className="font-display font-bold text-primary text-lg">
               Urban Dinners
             </SheetTitle>
-            <SheetDescription>by Mbali Mapholi, RD</SheetDescription>
+            <SheetDescription>by Mbali Mapholi, RD <span className="italic text-primary/70">— author of Inkonjane</span></SheetDescription>
           </SheetHeader>
 
           <nav className="flex flex-col gap-1 px-4 mt-4" aria-label="Mobile navigation">

@@ -16,7 +16,6 @@ import {
   Sparkles,
   X,
   Zap,
-  Snowflake,
 } from 'lucide-react';
 
 const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL || 'https://paystack.shop/pay/kd5jce61vn';
@@ -27,7 +26,7 @@ const FREE_TIER = {
   period: 'forever',
   description: 'Browse meals and get inspired — plan tonight\'s dinner.',
   features: [
-    { text: 'Browse all 36 South African dinner recipes', included: true },
+    { text: 'Browse all 43 South African dinner recipes', included: true },
     { text: 'View meal names, descriptions & cooking times', included: true },
     { text: 'Filter by budget, protein, cook time & dietary needs', included: true },
     { text: 'WhatsApp recipe sharing', included: true },
@@ -52,9 +51,9 @@ const PREMIUM_TIER = {
   period: '3 months',
   monthlyNote: 'Just R66/month — less than a take-away coffee',
   description: 'Unlock everything — full recipes, meal plans, grocery lists & dietitian tips.',
-  seasonNote: 'Winter 2026 Collection — 36 warm, comforting SA dinners',
+  seasonNote: '43 dietitian-approved South African dinner recipes',
   features: [
-    { text: 'Browse all 36 South African dinner recipes', included: true },
+    { text: 'Browse all 43 South African dinner recipes', included: true },
     { text: 'View meal names, descriptions & cooking times', included: true },
     { text: 'Filter by budget, protein, cook time & dietary needs', included: true },
     { text: 'WhatsApp recipe sharing', included: true },
@@ -105,8 +104,8 @@ function PricingCard({ tier }: { tier: typeof FREE_TIER }) {
         {isPremium && (
           <div className="absolute -top-3 left-1/2 -translate-x-1/2">
             <Badge className="gap-1 bg-primary px-3 py-1 text-primary-foreground shadow-sm">
-              <Snowflake className="h-3 w-3" />
-              Winter 2026
+              <Sparkles className="h-3 w-3" />
+              43 SA Dinners
             </Badge>
           </div>
         )}
@@ -221,14 +220,11 @@ export default function PremiumSection() {
           <h2 className="font-display text-2xl font-bold sm:text-3xl">
             Pricing Plan
           </h2>
-          <div className="mt-2 flex items-center justify-center gap-2">
-            <Snowflake className="h-4 w-4 text-primary" />
-            <p className="text-sm text-muted-foreground sm:text-base">
-              Currently serving our <span className="font-medium text-foreground">Winter 2026 Collection</span> — warm, comforting South African dinners
-            </p>
-          </div>
+          <p className="text-sm text-muted-foreground sm:text-base">
+            43 dietitian-approved South African dinner recipes — plan, cook, and enjoy with your family.
+          </p>
           <p className="mt-1 text-xs text-muted-foreground">
-            Recipes rotate every 3 months. No recurring subscriptions — buy one season at a time.
+            New recipes added regularly. No recurring subscriptions — buy one pass at a time.
           </p>
         </motion.div>
 
@@ -253,25 +249,21 @@ export default function PremiumSection() {
           className="mt-12"
         >
           <div className="rounded-xl bg-warm p-6 text-center">
-            <div className="flex items-center justify-center gap-2">
-              <Snowflake className="h-5 w-5 text-warm-foreground" />
-              <h3 className="font-display text-lg font-bold sm:text-xl">
-                Warm dinners for cold nights — invest in your family&apos;s health.
-              </h3>
-            </div>
+            <h3 className="font-display text-lg font-bold sm:text-xl">
+              Invest in your family&apos;s health — one dinner at a time.
+            </h3>
             <p className="mt-2 text-sm text-warm-foreground/80 sm:text-base">
-              Join South African families already planning smarter winter dinners with our Winter 2026 Collection.
+              Join South African families already planning smarter dinners with Urban Dinners.
             </p>
             <Button
               className="mt-5 gap-2"
               size="lg"
               onClick={() => {
-                // TODO: Replace with your Payhip product link for the Winter 2026 Season Pass
                 window.open(CHECKOUT_URL, '_blank');
               }}
             >
               <Sparkles className="h-4 w-4" />
-              Get Winter Season Pass — R199
+              Get Premium — R199 / 3 months
             </Button>
             <p className="mt-3 text-xs text-warm-foreground/60">
               3 months access &middot; Pay securely via Paystack &middot; Instant access after payment

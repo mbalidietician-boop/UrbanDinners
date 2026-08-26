@@ -193,7 +193,6 @@ export default function GroceryListSection() {
                 lines.push('');
               }
               lines.push('💡 Urban Dinners by Registered Dietitian Mbali Mapholi');
-              lines.push('🇿🇦 Winter 2026 Collection');
               lines.push('');
               lines.push('www.mbalimapholiinc.co.za');
               window.open(`https://wa.me/?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');

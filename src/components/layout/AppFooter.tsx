@@ -33,7 +33,7 @@ export default function AppFooter() {
               Urban Dinners
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
-              Created by Mbali Mapholi, Registered Dietitian
+              Created by Mbali Mapholi, Registered Dietitian <span className="italic">— author of Inkonjane</span>
             </p>
             <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
               Practical meal planning for busy South African families. Because

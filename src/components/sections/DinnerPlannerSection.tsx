@@ -312,7 +312,7 @@ function PremiumGate({ children }: { children: React.ReactNode }) {
             Unlock This Recipe
           </h4>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Get full ingredients, step-by-step instructions, nutrition info &amp; dietitian tips for all 36 recipes.
+            Get full ingredients, step-by-step instructions, nutrition info &amp; dietitian tips for all 43 recipes.
           </p>
           <Button
             className="w-full gap-2"
@@ -674,7 +674,6 @@ export default function DinnerPlannerSection() {
                           className="shrink-0 gap-1.5"
                           onClick={() => {
                             const text = encodeURIComponent(
-                              `🍽 *${m.name}*\n\n${m.description}\n\n⏱ ${m.totalTime}min | ${budgetLabel(m.budget)} | Serves ${m.servings}\n\n🔥 ${Math.round((m.calories ?? 0) * 4.184)} kJ per serving\n\n💡 Urban Dinners by Registered Dietitian Mbali Mapholi\n🇿🇦 Winter 2026 Collection\n\nwww.mbalimapholiinc.co.za`
                             );
                             window.open(`https://wa.me/?text=${text}`, '_blank');
                           }}
@@ -734,7 +733,6 @@ export default function DinnerPlannerSection() {
                       className="gap-1.5 text-xs"
                       onClick={() => {
                         const text = encodeURIComponent(
-                          `🍽 *${meal.name}*\n\n${meal.description}\n\n⏱ Prep: ${meal.prepTime}min | Cook: ${meal.cookTime}min | Serves: ${meal.servings}\n\n🔥 Energy: ${Math.round((meal.calories ?? 0) * 4.184)} kJ per serving\n\n💡 Urban Dinners by Registered Dietitian Mbali Mapholi\n🇿🇦 Winter 2026 Collection\n\nwww.mbalimapholiinc.co.za`
                         );
                         window.open(`https://wa.me/?text=${text}`, '_blank');
                       }}

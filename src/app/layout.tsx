@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Urban Dinners | 36 SA Dinner Recipes by Registered Dietitian Mbali Mapholi",
+    default: "Urban Dinners | 43 SA Dinner Recipes by Registered Dietitian Mbali Mapholi",
     template: "%s | Urban Dinners",
   },
   description:
-    "36 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. By Registered Dietitian Mbali Mapholi. Winter 2026 Collection.",
+    "43 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. By Registered Dietitian Mbali Mapholi.",
   keywords: [
     "Urban Dinners",
     "South African dinner recipes",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "healthy eating South Africa",
     "Mbali Mapholi",
     "registered dietitian",
-    "winter dinner recipes",
+    "dinner recipes South Africa",
     "meal plan South Africa",
     "budget meals South Africa",
     "kj nutrition info",
@@ -66,23 +66,23 @@ export const metadata: Metadata = {
     locale: "en_ZA",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Urban Dinners | 36 SA Dinner Recipes by Registered Dietitian Mbali Mapholi",
+    title: "Urban Dinners | 43 SA Dinner Recipes by Registered Dietitian Mbali Mapholi",
     description:
-      "36 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. Winter 2026 Collection.",
+      "43 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. By Registered Dietitian Mbali Mapholi.",
     images: [
       {
         url: "/og-image.png",
         width: 1344,
         height: 768,
-        alt: "Urban Dinners — 36 South African dinner recipes by Registered Dietitian Mbali Mapholi",
+        alt: "Urban Dinners — 43 South African dinner recipes by Registered Dietitian Mbali Mapholi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Urban Dinners | 36 SA Dinner Recipes by RD Mbali Mapholi",
+    title: "Urban Dinners | 43 SA Dinner Recipes by RD Mbali Mapholi",
     description:
-      "36 dietitian-approved South African dinner recipes with kilojoule info, meal planning & grocery lists. Winter 2026 Collection.",
+      "43 dietitian-approved South African dinner recipes with kilojoule info, meal planning & grocery lists. By Registered Dietitian Mbali Mapholi.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -111,7 +111,7 @@ export default function RootLayout({
               url: SITE_URL,
               logo: `${SITE_URL}/logo.svg`,
               description:
-                "36 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. By Registered Dietitian Mbali Mapholi.",
+                "43 dietitian-approved South African dinner recipes with kilojoule info, meal planning, grocery lists & dietary filters. By Registered Dietitian Mbali Mapholi.",
               founder: {
                 "@type": "Person",
                 name: "Mbali Mapholi",
