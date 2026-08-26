@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+# Allow full crawl for social previews — they need OG image
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mbalimapholiinc.co.za/sitemap.xml

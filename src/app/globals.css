@@ -1,0 +1,610 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDQ.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.woff2') format('woff2');
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-warm: var(--warm);
+  --color-warm-foreground: var(--warm-foreground);
+  --color-sage: var(--sage);
+  --color-sage-foreground: var(--sage-foreground);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-foreground: var(--terracotta-foreground);
+  --color-cream: var(--cream);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Warm African-inspired palette */
+  --background: #FFFBF5;
+  --foreground: #2C1810;
+  --card: #FFFFFF;
+  --card-foreground: #2C1810;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C1810;
+
+  --primary: #B85C38;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #F5EDE3;
+  --secondary-foreground: #4A3728;
+
+  --muted: #F5EDE3;
+  --muted-foreground: #8B7355;
+
+  --accent: #6B8F71;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #D4423B;
+
+  --border: #E8DDD0;
+  --input: #E8DDD0;
+  --ring: #B85C38;
+
+  --chart-1: #B85C38;
+  --chart-2: #6B8F71;
+  --chart-3: #E8985E;
+  --chart-4: #D4A574;
+  --chart-5: #8B6F4E;
+
+  --warm: #FFF3E6;
+  --warm-foreground: #8B5E34;
+
+  --sage: #EDF5ED;
+  --sage-foreground: #3D6B45;
+
+  --terracotta: #B85C38;
+  --terracotta-foreground: #FFFFFF;
+
+  --cream: #FFFBF5;
+
+  --sidebar: #FFF7F0;
+  --sidebar-foreground: #2C1810;
+  --sidebar-primary: #B85C38;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5EDE3;
+  --sidebar-accent-foreground: #4A3728;
+  --sidebar-border: #E8DDD0;
+  --sidebar-ring: #B85C38;
+}
+
+.dark {
+  --background: #1A120D;
+  --foreground: #F5EDE3;
+  --card: #2C1810;
+  --card-foreground: #F5EDE3;
+  --popover: #2C1810;
+  --popover-foreground: #F5EDE3;
+
+  --primary: #E8985E;
+  --primary-foreground: #1A120D;
+
+  --secondary: #3D2B1E;
+  --secondary-foreground: #F5EDE3;
+
+  --muted: #3D2B1E;
+  --muted-foreground: #A89078;
+
+  --accent: #6B8F71;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #E85555;
+
+  --border: #4A3728;
+  --input: #4A3728;
+  --ring: #E8985E;
+
+  --chart-1: #E8985E;
+  --chart-2: #6B8F71;
+  --chart-3: #D4A574;
+  --chart-4: #B85C38;
+  --chart-5: #A89078;
+
+  --warm: #3D2B1E;
+  --warm-foreground: #E8985E;
+
+  --sage: #1A2E1D;
+  --sage-foreground: #8BBF95;
+
+  --terracotta: #E8985E;
+  --terracotta-foreground: #1A120D;
+
+  --cream: #1A120D;
+
+  --sidebar: #1A120D;
+  --sidebar-foreground: #F5EDE3;
+  --sidebar-primary: #E8985E;
+  --sidebar-primary-foreground: #1A120D;
+  --sidebar-accent: #3D2B1E;
+  --sidebar-accent-foreground: #F5EDE3;
+  --sidebar-border: #4A3728;
+  --sidebar-ring: #E8985E;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C4B0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B85C38;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll offset for sticky header */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* ── Print Styles ─────────────────────────────────────────────────── */
+@media print {
+  /* Hide everything by default */
+  body > * {
+    display: none !important;
+  }
+
+  /* Only show the grocery section */
+  body > #grocery,
+  body #grocery {
+    display: block !important;
+  }
+
+  /* Hide all other sections by id */
+  #hero,
+  #dinner,
+  #fridge,
+  #reminders,
+  #premium,
+  #personalisation,
+  #about,
+  #meal-planner {
+    display: none !important;
+  }
+
+  /* Also hide common layout elements */
+  header,
+  nav,
+  footer,
+  [role="navigation"],
+  [role="banner"],
+  [role="contentinfo"] {
+    display: none !important;
+  }
+
+  /* ── Page setup ────────────────────────────────────────────────── */
+  @page {
+    margin: 1.5cm 2cm;
+    size: A4;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Inter', Arial, Helvetica, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Grocery section layout ────────────────────────────────────── */
+  #grocery {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: visible !important;
+  }
+
+  #grocery * {
+    visibility: visible !important;
+  }
+
+  /* ── Print header with title and date ──────────────────────────── */
+  #grocery > div:first-of-type::before {
+    content: "Urban Dinners \2014 Grocery List";
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.15cm;
+    border-bottom: 1.5pt solid #000;
+    padding-bottom: 0.2cm;
+  }
+
+  #grocery > div:first-of-type::after {
+    content: "Printed on " attr(data-print-date);
+    display: block;
+    font-size: 9pt;
+    color: #444;
+    margin-top: 0.1cm;
+    margin-bottom: 0.5cm;
+  }
+
+  /* ── Hide non-essential elements inside #grocery ───────────────── */
+  #grocery button,
+  #grocery .progress,
+  #grocery [data-slot="progress"],
+  #grocery .animate-pulse,
+  #grocery svg.lucide-shopping-cart,
+  #grocery svg.lucide-loader-2 {
+    display: none !important;
+  }
+
+  /* Hide the Smart Shopping Tips card */
+  #grocery > div > div:last-child {
+    display: none !important;
+  }
+
+  /* Hide the original section header (replaced by ::before/::after) */
+  #grocery > div > div:first-child {
+    display: none !important;
+  }
+
+  /* Hide the progress bar container */
+  #grocery > div > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* ── Card styling ──────────────────────────────────────────────── */
+  #grocery [class*="rounded"],
+  #grocery [class*="shadow"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  #grocery [data-slot="card"] {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #grocery [data-slot="card-header"] {
+    padding: 0.3cm 0 0.1cm 0 !important;
+    border-bottom: 0.5pt solid #ccc !important;
+    margin-bottom: 0.1cm;
+  }
+
+  #grocery [data-slot="card-header"] [data-slot="card-title"] {
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+  }
+
+  #grocery [data-slot="card-content"] {
+    padding: 0.1cm 0 !important;
+  }
+
+  /* ── Page break handling ───────────────────────────────────────── */
+  #grocery [data-slot="card"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  #grocery label {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ── Checkbox replacement with text symbols ────────────────────── */
+  #grocery [data-slot="checkbox"] {
+    display: none !important;
+  }
+
+  #grocery label::before {
+    content: "\2610";  /* ☐ unchecked */
+    font-size: 12pt;
+    margin-right: 0.3cm;
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    color: #000 !important;
+  }
+
+  /* Checked items show filled checkbox */
+  #grocery label:has([data-state="checked"])::before {
+    content: "\2611";  /* ☑ checked */
+  }
+
+  /* ── Item text styling ─────────────────────────────────────────── */
+  #grocery label {
+    cursor: default !important;
+    padding: 0.1cm 0 !important;
+    border-radius: 0 !important;
+    transition: none !important;
+  }
+
+  #grocery label:hover {
+    background: none !important;
+  }
+
+  #grocery label span:first-of-type {
+    font-size: 11pt !important;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Checked items: strike-through in print */
+  #grocery label:has([data-state="checked"]) span:first-of-type {
+    text-decoration: line-through !important;
+    color: #666 !important;
+  }
+
+  /* Quantity text */
+  #grocery label span:last-of-type {
+    font-size: 9pt !important;
+    color: #333 !important;
+  }
+
+  /* Meal name sub-text */
+  #grocery label p {
+    font-size: 8pt !important;
+    color: #666 !important;
+  }
+
+  /* Muted-foreground color override */
+  #grocery [class*="text-muted-foreground"] {
+    color: #333 !important;
+  }
+
+  /* Category count badge */
+  #grocery [class*="ml-auto"] {
+    color: #666 !important;
+  }
+
+  /* Category emoji */
+  #grocery span[role="img"] {
+    font-size: 13pt !important;
+  }
+
+  /* Remove any motion/animation styles */
+  #grocery [style*="opacity"],
+  #grocery [style*="transform"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Remove skeleton/loading states */
+  #grocery [data-slot="skeleton"] {
+    display: none !important;
+  }
+
+  /* ── Meal Planner print styles ────────────────────────────────── */
+  body.printing-planner > * {
+    display: none !important;
+  }
+
+  body.printing-planner #planner {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body.printing-planner #planner * {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    color: #000 !important;
+  }
+
+  body.printing-planner #planner button {
+    display: none !important;
+  }
+
+  body.printing-planner #planner .grid {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 4pt !important;
+  }
+
+  body.printing-planner #planner [class*="rounded"] {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 0.5pt solid #ccc !important;
+  }
+
+  body.printing-planner #planner [class*="bg-primary"] {
+    background: #f0f0f0 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body.printing-planner #planner [class*="ring-"] {
+    box-shadow: none !important;
+  }
+
+  /* Print header for meal plan */
+  body.printing-planner #planner > div > div:first-child::before {
+    content: "Urban Dinners — Weekly Dinner Plan";
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.15cm;
+    border-bottom: 1.5pt solid #000;
+    padding-bottom: 0.2cm;
+  }
+
+  body.printing-planner #planner > div > div:first-child::after {
+    content: "Week of " attr(data-week-date);
+    display: block;
+    font-size: 9pt;
+    color: #444;
+    margin-top: 0.1cm;
+    margin-bottom: 0.5cm;
+  }
+}
+
+/* ── Print Recipe Card ────────────────────────────────────────── */
+@media print {
+  /* When printing a recipe, hide everything and show only the dialog */
+  body.printing-recipe > * {
+    display: none !important;
+  }
+
+  body.printing-recipe [data-radix-dialog-content] {
+    display: block !important;
+    position: static !important;
+    fixed: none !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    overflow: visible !important;
+  }
+
+  body.printing-recipe [data-radix-dialog-overlay] {
+    display: none !important;
+  }
+
+  body.printing-recipe [data-radix-scroll-area-viewport] {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Hide print/whatsapp buttons */
+  body.printing-recipe button[class*="gap-1"] {
+    display: none !important;
+  }
+
+  /* Recipe title */
+  body.printing-recipe [data-radix-dialog-title] {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20pt;
+    margin-bottom: 0.3cm;
+  }
+
+  /* Recipe print header */
+  body.printing-recipe [data-radix-dialog-content] > div > div:first-child::before {
+    content: "Urban Dinners — Recipe Card";
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 10pt;
+    color: #B85C38;
+    margin-bottom: 0.1cm;
+    letter-spacing: 0.05em;
+  }
+
+  body.printing-recipe [data-radix-dialog-content] > div > div:first-child::after {
+    content: "Urban Dinners by Registered Dietitian Mbali Mapholi | Winter 2026 Collection";
+    display: block;
+    font-size: 8pt;
+    color: #888;
+    margin-top: 0.1cm;
+    margin-bottom: 0.4cm;
+  }
+}
